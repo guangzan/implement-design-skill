@@ -7,18 +7,24 @@
 - 在交付物是**用户仓库中的前端代码**时，用固定步骤收齐设计上下文、建立验收基准、落盘资源、对齐本仓库技术栈，最后对照设计做校验。
 - 设计来源可包括：腾讯设计 [Ardot](https://docs.ardot.tencent.com/ardot-mcp.html)（含 MCP）、蓝湖 / MasterGo / Pixso 等协作平台、静态导出图、或文档 + 截图组合。
 
-不适用于：只在设计工具里改稿、或「从代码反推设计」——应使用对应设计工具或团队专用能力。
-
 ## 仓库结构
 
 ```
 skills/implement-design/SKILL.md   # 完整技能：工作流、规则、Ardot MCP 附录
 ```
 
+## 安装
+
+使用 [skills 生态 CLI](https://github.com/vercel-labs/skills)（会安装到本机已检测到的 Agent，例如 Cursor、Claude Code、Codex 等）：
+
+```bash
+npx skills add guangzan/implement-design-skill
+```
+
 ## 如何使用
 
-1. 将本仓库中的 `skills/implement-design/` 安装到你的 Agent 技能目录（具体路径依所用客户端而定，例如 Cursor 的 `skills` 或 `.cursor/skills` 等约定）。
-2. 在助手中开启该技能后，在需要「按稿开发」「还原 UI」「高保真实现设计」时，助手会按 `SKILL.md` 中的必选工作流执行。
+1. **推荐：** 使用上文「安装」中的 `npx skills add`；或手动将 `skills/implement-design/` 复制/链接到你的 Agent 技能目录（路径依客户端而定，例如 Cursor 的 `.cursor/skills` 等约定）。
+2. 开启该技能后，在需要「按稿开发」「还原 UI」「高保真实现设计」时，助手会按 `SKILL.md` 中的必选工作流执行。
 
 更细的边界、步骤清单与 Ardot 工具推荐调用顺序，请直接阅读 [skills/implement-design/SKILL.md](skills/implement-design/SKILL.md)。
 
